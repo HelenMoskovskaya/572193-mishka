@@ -1,8 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Helen Moskovskaya](https://up.htmlacademy.ru/adaptive/13/user/572193).
-* Наставник: `Неизвестно`.
-
+* Наставник: [Anna Lisenenkova](https://htmlacademy.ru/profile/ankhena)
 ---
 
 **Обратите внимание, что папка с вашими исходными файлами — `source/`.**
