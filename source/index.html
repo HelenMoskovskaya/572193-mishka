@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
@@ -13,48 +14,48 @@
         <button class="navigation__toggle navigation__toggle--open" type="button">Открыть меню</button>
         <button class="navigation__toggle navigation__toggle--close" type="button">Закрыть меню</button>
         <ul class="navigation__list main-nav">
-          <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
-          <li class="main-nav__item"><a href="form-order.html">Вязание на заказ</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="catalog.html">Каталог товаров</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="form-order.html">Вязание на заказ</a></li>
         </ul>
         <ul class="navigation__list user-nav">
-          <li class="user-nav__item"><a href="#">Поиск по сайту</a></li>
-          <li class="user-nav__item"><a href="#">Корзина: пока пуста</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#">Поиск по сайту</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#">Корзина: пока пуста</a></li>
         </ul>
       </nav>
     </header>
     <main class="page-main">
-      <h1>Милые штучки ручной работы для дома</h1>
+      <h1 class="title-1">Милые штуки ручной работы для дома</h1>
       <section class="promo">
         <h2 class="visually-hidden">Промо каталог</h2>
-        <ul class="promo__list promo-catalog">
-          <li class="promo-catalog__item"><a href="interior.html">Предметы интерьера</a></li>
-          <li class="promo-catalog__item"><a href="baby-toy.html">Детские игрушки</a></li>
+        <ul class="promo__list">
+          <li class="promo__item promo-item-1"><a class="promo__link" href="interior.html">Предметы интерьера</a></li>
+          <li class="promo__item promo-item-2"><a class="promo__link" href="baby-toy.html">Детские игрушки</a></li>
         </ul>
       </section>
       <section class="popular-goods">
-        <h2>Вязаные корзинки</h2>
-        <span>Товар недели</span><!--не лучше ли сделать псевдоэлементом??-->
+        <h2 class="title-2">Вязаные корзинки</h2>
+        <span class="popular-goods__marker">Товар недели</span>
         <p class="popular-goods__info">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах</p>
-        <table class="popular-goods__table">
+        <table class="popular-goods__table popular-table">
           <tr>
-            <td>Цвет:</td>
-            <td><q>Тиффани</q>/серый</td>
+            <td class="popular-table__row popular-column-1">Цвет:</td>
+            <td class="popular-table__row popular-column-2"><q>Тиффани</q>/серый</td>
           </tr>
           <tr>
-            <td>Диаметр:</td>
-            <td>25 см</td>
+            <td class="popular-table__row popular-column-1">Диаметр:</td>
+            <td class="popular-table__row popular-column-2">25 см</td>
           </tr>
           <tr>
-            <td>Высота:</td>
-            <td>15 см</td>
+            <td class="popular-table__row popular-column-1">Высота:</td>
+            <td class="popular-table__row popular-column-2">15 см</td>
           </tr>
         </table>
         <img src="http://placehold.it/150x100" alt="Товар недели">
         <p class="popular-goods__price">Цена: 990 руб.</p>
-        <button class="modal-open">Заказать</button>
+        <button class="button modal-open">Заказать</button>
       </section>
       <section class="about-us">
-        <h2>Коротко о нас</h2>
+        <h2 class="title-2">Коротко о нас:</h2>
         <ul class="about-us__list">
           <li class="about-us__item">Экологически чистые материалы</li>
           <li class="about-us__item">Скандинавский стиль по российской цене</li>
@@ -65,7 +66,7 @@
         </ul>
       </section>
       <section class="reviews">
-        <h2>Отзывы</h2>
+        <h2 class="title-2">Отзывы</h2>
         <blockquote class="reviews__item">
           <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
           <cite class="reviews__author-name">Анастасия Красильникова</cite>
@@ -73,32 +74,43 @@
         </blockquote>
         <button class="reviews__prev" type="button">Предыдущий отзыв</button>
         <button class="reviews__next" type="button">Следующий отзыв</button>
-        <p><a class="reviews__write-button" href="#">Написать</a></p>
+        <p><a class="button reviews__write-button" href="#">Написать</a></p>
       </section>
       <section class="contacts">
-        <h3>Контакты</h3>
-        <table class="contacts__table">
+        <h3 class="title-3">Контакты</h3>
+        <table class="contacts-table">
           <tr>
-            <td>e-mail:</td>
-            <td>info@mimimishkashop.ru</td>
+            <td class="contacts-table__row contacts-column-1">e-mail:</td>
+            <td class="contacts-table__row contacts-column-2">info@mimimishkashop.ru</td>
           </tr>
           <tr>
-            <td>адрес:</td>
-            <td>г. Санкт-Петербург, ул. Большая Конюшенная,д. 19/8, офис 101</td>
+            <td class="contacts-table__row contacts-column-1">адрес:</td>
+            <td class="contacts-table__row contacts-column-2">г. Санкт-Петербург, ул. Большая Конюшенная,д. 19/8, офис 101</td>
           </tr>
         </table>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123554!2d30.32089461551221!3d59.93879686904862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xfbeb3cbd3eed50c8!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCAxMDEsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1516492934421" width="600" height="450"></iframe>
-        <p><a class="contacts__button" href="#">Напишите нам</a></p>
+        <p><a class="button contacts__button" href="#">Напишите нам</a></p>
       </section>
       <section class="modal-basket">
-        <h2>Добавить в корзину</h2>
+        <h2 class="title-2">Добавить в корзину</h2>
         <p>Выберите размер:</p>
-        <ul class="modal-basket__list">
-          <li class="modal-basket__item">S</li>
-          <li class="modal-basket__item">M</li>
-          <li class="modal-basket__item">L</li>
-        </ul>
-        <button class="modal-basket__button" type="button">Добавить</button>
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <ul class="modal-basket__list">
+            <li class="modal-basket__item">
+              <input type="radio" name="radio" id="radio-field-catalog-1">
+              <label for="radio-field-catalog-1">S</label>
+            </li>
+            <li class="modal-basket__item">
+              <input type="radio" name="radio" id="radio-field-catalog-2">
+              <label for="radio-field-catalog-2">M</label>
+            </li>
+            <li class="modal-basket__item">
+              <input type="radio" name="radio" id="radio-field-catalog-3">
+              <label for="radio-field-catalog-3">L</label>
+            </li>
+          </ul>
+        <button class="button modal-basket__button" type="button">Добавить</button>
+        </form>
       </section>
     </main>
     <footer class="page-footer">
@@ -119,7 +131,7 @@
       <div class="working">
         <ul class="working__list">
           <li class="working__item">
-            <a href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
+            <a class="working__link" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
           </li>
           <li>
             <a href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">htmlacademy</span></a>

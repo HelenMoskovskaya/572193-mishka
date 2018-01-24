@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
@@ -13,57 +14,68 @@
         <button class="navigation__toggle navigation__toggle--open" type="button">Открыть меню</button>
         <button class="navigation__toggle navigation__toggle--close" type="button">Закрыть меню</button>
         <ul class="navigation__list main-nav">
-          <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
-          <li class="main-nav__item"><a href="form-order.html">Вязание на заказ</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="catalog.html">Каталог товаров</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="form-order.html">Вязание на заказ</a></li>
         </ul>
         <ul class="navigation__list user-nav">
-          <li class="user-nav__item"><a href="#">Поиск по сайту</a></li>
-          <li class="user-nav__item"><a href="#">Корзина: пока пуста</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#">Поиск по сайту</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#">Корзина: пока пуста</a></li>
         </ul>
       </nav>
     </header>
     <main class="page-catalog">
       <section class="catalog">
-        <h1>Каталог товаров</h1>
+        <h1 class="title-1 catalog__title">Каталог товаров</h1>
         <ul class="catalog__list">
-          <li class="catalog__item">
+          <li class="catalog__item goods-item">
             <a href="bunny.html"><img src="http://placehold.it/150x100" alt="Зайчик-попрыгайчик"></a>
-            <p><a href="bunny.html">Зайчик-попрыгайчик</a></p>
-            <p>Рост 30 см, вес 200 г</p>
-            <span>1 200 руб.</span>
+            <p><a class="goods-item__link-title" href="bunny.html">Зайчик-попрыгайчик</a></p>
+            <p class="goods-item__description">Рост 30 см, вес 200 г</p>
+            <span class="goods-item__price">1 200 руб.</span>
             <button class="modal-open">В корзину</button>
           </li>
-          <li class="catalog__item">
+          <li class="catalog__item goods-item">
             <a href="laundry-basket.html"><img src="http://placehold.it/150x100" alt="Корзинка для белья"></a>
-            <p><a href="laundry-basket.html">Корзинка для белья</a></p>
-            <p>Диаметр 15 см, высота 10 см</p>
-            <span>690 руб.</span>
+            <p><a class="goods-item__link-title" href="laundry-basket.html">Корзинка для белья</a></p>
+            <p class="goods-item__description">Диаметр 15 см, высота 10 см</p>
+            <span class="goods-item__price">690 руб.</span>
             <button class="modal-open">В корзину</button>
           </li>
-          <li class="catalog__item">
+          <li class="catalog__item goods-item">
             <a href="big-basket.html"><img src="http://placehold.it/150x100" alt="Корзинка для белья"></a>
-            <p><a href="big-basket.html">Корзинка для белья</a></p>
-            <p>Диаметр 30 см, высота 30 см</p>
-            <span>1 500 руб.</span>
+            <p><a class="goods-item__link-title" href="big-basket.html">Корзинка для белья</a></p>
+            <p class="goods-item__description">Диаметр 30 см, высота 30 см</p>
+            <span class="goods-item__price">1 500 руб.</span>
             <button class="modal-open">В корзину</button>
           </li>
         </ul>
       </section>
       <section class="making-description">
-        <h3>Процесс производства</h3>
+        <h3 class="title-3 making-description__title">Процесс производства</h3>
         <video controls preload="metadata" width="260" height="150"></video>
-        <p>По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <a href="form-order.html">Сделать заказ</a>
+        <p class="making-description__info">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+        <a class="button making-description__button" href="form-order.html">Сделать заказ</a>
       </section>
       <section class="modal-basket">
-        <h2>Добавить в корзину</h2>
+        <h2 class="title-2">Добавить в корзину</h2>
         <p>Выберите размер:</p>
-        <ul class="modal-basket__list">
-          <li class="modal-basket__item">S</li>
-          <li class="modal-basket__item">M</li>
-          <li class="modal-basket__item">L</li>
-        </ul>
-        <button class="modal-basket__button" type="button">Добавить</button>
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <ul class="modal-basket__list">
+            <li class="modal-basket__item">
+              <input type="radio" name="radio" id="radio-field-catalog-1">
+              <label for="radio-field-catalog-1">S</label>
+            </li>
+            <li class="modal-basket__item">
+              <input type="radio" name="radio" id="radio-field-catalog-2">
+              <label for="radio-field-catalog-2">M</label>
+            </li>
+            <li class="modal-basket__item">
+              <input type="radio" name="radio" id="radio-field-catalog-3">
+              <label for="radio-field-catalog-3">L</label>
+            </li>
+          </ul>
+        <button class="button modal-basket__button" type="button">Добавить</button>
+        </form>
       </section>
     </main>
     <footer class="page-footer">
