@@ -1,0 +1,76 @@
+.making-desc {
+  width: auto;
+  margin-top: 80px;
+  padding-left: 30px;
+  margin-bottom: 55px;
+  line-height: 1.41;
+  border: 1px solid @gray;
+}
+
+.making-desc__title {
+  padding-left: 40px;
+  .font-rule-1;
+
+}
+
+.making-desc__info {
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.making-desc__button {
+  margin-bottom: 33px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .making-desc {
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .making-desc__title {
+    .font-rule-2;
+    line-height: 1.2;
+  }
+  .making-desc__info {
+    font-size: 15px;
+    line-height: 2.0;
+  }
+  .making-desc__button {
+    width: 584px;
+  }
+  .making-desc__video {
+    width: 668px;
+    height: 455px;
+    order: -1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .making-desc {
+    width: auto;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .making-desc__title {
+  position: absolute;
+  right: 230px;
+  }
+  .making-desc__wrapper {
+    width: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .making-desc__video {
+    width: 682px;
+    height: 455px;
+  }
+  .making-desc__button {
+    width: 230px;
+  }
+}

@@ -1,26 +1,113 @@
 .popular-goods {
+  width: 260px;
+  .padding-mobile;
+  margin-top: 55px;
 }
-
 .popular-goods__marker {
   .font-rule-1;
   color: @light-green;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .popular-goods__table {
   line-height: 1.33;
 }
-
-.popular-table__row {
-  padding-bottom: 18px;
-}
-
-.popular-column-2 {
-  padding-left: 26px;
+.popular-goods__title {
+  .null;
 }
 
 .popular-goods__price {
   font-family: @font-bold;
   font-size: 17px;
   line-height: 1.41;
+}
+
+.popular-goods__table-row {
+  padding-bottom: 18px;
+}
+.popular-goods__img {
+  width: 260px;
+  height: 315px;
+}
+
+
+
+@media (min-width: @tablet-width) {
+  .popular-goods {
+    width: 668px;
+    .padding-tablet;
+  }
+  .popular-goods__title {
+    width: 430px;
+  }
+  .popular-goods__marker {
+    width: 75px;
+    line-height: 1;
+  }
+  .popular-goods__main-wrapper {
+    margin-top: 55px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .popular-goods__table-wrapper {
+    width: 285px;
+  }
+  .popular-goods__price-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-right: auto;
+    transform: translateY(-80px);
+  }
+  .popular-goods__title-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .popular-goods__price {
+    .null;
+    font-family: @font-bold;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .popular-goods__img {
+    width: 333px;
+    height: 404px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .popular-goods {
+    width: 1050px;
+    .padding-desktop;
+    margin-top: 20px;
+  }
+  .popular-goods__title {
+    .null;
+    width: 530px;
+    order: 1;
+    z-index: 2;
+  }
+  .popular-goods__marker {
+
+  }
+  .popular-goods__table-wrapper {
+    margin-top: 200px;
+  }
+  .popular-goods__main-wrapper {
+    padding-left: 175px;
+    margin-top: 0px;
+  }
+/*временно*/
+  .popular-goods__img {
+    width: 525px;
+    height: 636px;
+  }
+
+  .popular-goods__title-wrapper {
+    transform: translateY(150px);
+  }
 }
