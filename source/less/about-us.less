@@ -1,11 +1,39 @@
 .about-us {
+  margin-top: 70px;
+  width: auto;
   .font-rule-1;
 }
 
-.about-us__list {
+.about-us__list-first,
+.about-us__list-second {
   .reset-ul;
 }
 
 .about-us__item {
   margin-top: 91px;
+}
+
+@media (min-width: @tablet-width) {
+  .about-us {
+    width: auto;
+    .font-rule-2;
+  }
+  .about-us__list-first {
+    width: 245px;
+    margin-right: 50px;
+  }
+  .about-us__list-second {
+    width: 300px;
+  }
+  .about-us__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-us {
+    width: auto;
+    margin-left: 175px;
+  }
 }
