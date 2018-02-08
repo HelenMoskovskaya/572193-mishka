@@ -1,7 +1,8 @@
 .about-us {
-  margin-top: 70px;
   width: auto;
+  .padding-mobile;
   .font-rule-1;
+  margin-bottom: 31px;
 }
 
 .about-us__list-first,
@@ -10,22 +11,40 @@
 }
 
 .about-us__item {
-  margin-top: 91px;
+  width: 251px;
+  margin-top: 84px;
+  word-wrap: break-word;
 }
 
 @media (min-width: @tablet-width) {
   .about-us {
-    width: auto;
+    width: 768px;
+    margin-left: 20px;
     .font-rule-2;
+  }
+  .about-us__title {
+    .null;
+    padding-top: 42px;
+
   }
   .about-us__list-first {
     width: 245px;
-    margin-right: 50px;
+    margin-right: auto;
   }
   .about-us__list-second {
-    width: 300px;
+    width: 295px;
+    margin-left: auto;
+  }
+  .about-us__item {
+    padding-bottom: 26px;
+     &--4,
+     &--5 {
+       width: 300px;
+     }
   }
   .about-us__wrapper {
+    width: 632px;
+    padding-top: 21px;
     display: flex;
     flex-wrap: wrap;
   }
@@ -34,6 +53,10 @@
 @media (min-width: @desktop-width) {
   .about-us {
     width: auto;
-    margin-left: 175px;
+    margin-left: 191px;
+    padding-top: 37px;
+  }
+  .about-us__wrapper {
+    width: 647px;
   }
 }

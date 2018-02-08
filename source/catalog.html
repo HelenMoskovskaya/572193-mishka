@@ -8,25 +8,25 @@
   </head>
   <body>
     <header class="page-header">
+      <nav class="navigation navigation--closed navigation--nojs">
+        <button class="navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="page-header-logo__wrapper">
       <a href="index.html" class="page-header-logo">
-        <img class="page-header-logo__image" src="http://placehold.it/150x100" alt="Логотип Мишка">
-      </a>
-      <nav class="navigation">
-        <button class="navigation__button-item navigation__button-item--open" type="button">Открыть меню</button>
-        <button class="navigation__button-item navigation__button-item--close" type="button">Закрыть меню</button>
+        <img class="page-header-logo__image" src="img/logo-mobile.svg" width="86" height="35px" alt="Логотип Мишка">
+      </a></div>
+        <div class="navigation__wrapper">
         <ul class="navigation__main-list">
           <li class="navigation__main-item"><a class="navigation__link" href="catalog.html">Каталог товаров</a></li>
           <li class="navigation__main-item"><a class="navigation__link" href="form-order.html">Вязание на заказ</a></li>
           <li class="navigation__main-item"><a class="navigation__link" href="new.html">Новые поступления</a></li>
           <li class="navigation__main-item"><a class="navigation__link" href="sale.html">Распродажа</a></li>
         </ul>
-        <div class="navigation__user-wrapper">
-        <ul class="navigation__user-list">
-          <li class="navigation__user-item"><a class="navigation__link" href="#"><span class="navigation__desc-item">Поиск по сайту</span></a></li>
-          <li class="navigation__user-item"><a class="navigation__link" href="#">Корзина: пока пуста</a></li>
-        </ul>
         <span class="navigation__info">Бесплатная доставка по России</span>
-      </div>
+        </div>
+        <ul class="navigation__user-list">
+          <li class="navigation__user-item navigation__search"><a class="navigation__link" href="#"><span class="navigation__desc-search">Поиск по сайту</span></a></li>
+          <li class="navigation__user-item navigation__cart"><a class="navigation__link" href="#">Корзина: пока пуста</a></li>
+        </ul>
       </nav>
     </header>
     <main class="page-catalog">
@@ -34,45 +34,51 @@
         <h1 class="title-1 catalog__title">Каталог товаров</h1>
         <ul class="catalog__list">
           <li class="catalog__item">
-            <a href="bunny.html"><img class="catalog__item-img" src="http://placehold.it/150x100" alt="Зайчик-попрыгайчик"></a>
+            <a href="bunny.html"><img class="catalog__item-img" src="img/photo-hare-mobile@1x.jpg" alt="Зайчик-попрыгайчик"></a>
             <div class="catalog__item-wrapper">
-            <p><a class="catalog__item-link" href="bunny.html">Зайчик-попрыгайчик</a></p>
+              <div class="catalog__desc-wrap">
+            <p class="catalog__link-wrap"><a class="catalog__item-link" href="bunny.html">Зайчик-попрыгайчик</a></p>
             <p class="catalog__item-desc">Рост 30 см, вес 200 г</p>
+          </div>
             <div class="catalog__price-wrapper">
             <span class="catalog__item-price">1 200 руб.</span>
-            <button class="modal-open catalog__button">В корзину</button>
+            <button class="modal-open catalog__button"><span class="visually-hidden">В корзину</span></button>
           </div>
         </div>
           </li>
           <li class="catalog__item">
-            <a href="laundry-basket.html"><img class="catalog__item-img" src="http://placehold.it/150x100" alt="Корзинка для белья"></a>
+            <a href="laundry-basket.html"><img class="catalog__item-img" src="img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья"></a>
             <div class="catalog__item-wrapper">
-            <p><a class="catalog__item-link" href="laundry-basket.html">Корзинка для белья</a></p>
+              <div class="catalog__desc-wrap">
+            <p class="catalog__link-wrap"><a class="catalog__item-link" href="laundry-basket.html">Корзинка для белья</a></p>
             <p class="catalog__item-desc">Диаметр 15 см, высота 10 см</p>
+          </div>
             <div class="catalog__price-wrapper">
             <span class="catalog__item-price">690 руб.</span>
-            <button class="modal-open catalog__button">В корзину</button>
+            <button class="modal-open catalog__button"><span class="visually-hidden">В корзину</span></button>
           </div>
             </div>
           </li>
           <li class="catalog__item">
-            <a href="big-basket.html"><img class="catalog__item-img" src="http://placehold.it/150x100" alt="Корзинка для белья"></a>
+            <a href="big-basket.html"><img class="catalog__item-img" src="img/photo-toys-mobile@1x.jpg" alt="Корзинка для белья"></a>
             <div class="catalog__item-wrapper">
-            <p><a class="catalog__item-link" href="big-basket.html">Корзинка для белья</a></p>
+              <div class="catalog__desc-wrap">
+            <p class="catalog__link-wrap"><a class="catalog__item-link" href="big-basket.html">Большая корзинка для игрушек</a></p>
             <p class="catalog__item-desc">Диаметр 30 см, высота 30 см</p>
+          </div>
             <div class="catalog__price-wrapper">
             <span class="catalog__item-price">1 500 руб.</span>
-            <button class="modal-open catalog__button">В корзину</button>
+            <button class="modal-open catalog__button"><span class="visually-hidden">В корзину</span></button>
           </div>
         </div>
           </li>
         </ul>
       </section>
       <section class="making-desc">
-        <h3 class="title-3 making-desc__title">Процесс производства</h3>
         <video class="making-desc__video" controls preload="metadata" width="260" height="150"></video>
         <div class="making-desc__wrapper">
-        <p class="making-desс__info">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <h3 class="title-3 making-desc__title">Процесс производства</h3>
+        <p class="making-desc__info">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
         <a class="button making-desc__button" href="form-order.html">Сделать заказ</a>
       </div>
       </section>
@@ -98,8 +104,9 @@
         </form>
       </section>
     </main>
-    <footer class="page-footer">
-      <a class="page-footer-logo">
+   <footer class="page-footer">
+      <div class="page-footer__wrapper">
+      <a href="index.html" class="page-footer-logo">
         <img class="page-footer-logo__image" src="http://placehold.it/150x100" alt="Логотип Мишка">
       </a>
       <section class="social">
@@ -117,14 +124,15 @@
         </ul>
         <ul class="social__working">
           <li class="social__working-item">
-            <a class="social__working-link" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
+            <a class="social__working-link social__working-link--text" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
           </li>
           <li class="social__working-item">
-            <a class="social__working-link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">htmlacademy</span></a>
+            <a class="social__working-link social__working-link--logo" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">htmlacademy</span></a>
           </li>
         </ul>
-      </div>
       </section>
+    </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

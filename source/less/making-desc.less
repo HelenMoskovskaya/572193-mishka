@@ -1,70 +1,128 @@
 .making-desc {
-  width: auto;
-  margin-top: 80px;
-  padding-left: 30px;
-  margin-bottom: 55px;
+  position: relative;
+  width: 258px;
+  margin: 0 auto;
+  margin-bottom: 58px;
+  margin-top: 32px;
   line-height: 1.41;
   border: 1px solid @gray;
 }
 
 .making-desc__title {
-  padding-left: 40px;
+  position: absolute;
+  .null;
+  width: 60px;
+  top: 22px;
+  left: 89px;
   .font-rule-1;
+  line-height: 1.43;
 
+}
+
+.making-desc__video {
+  width: 258px;
+  min-height: 150px;
+  margin-top: 94px;
 }
 
 .making-desc__info {
+  .null;
+  width: 185px;
+  margin-top: 22px;
+  margin-left: 33px;
   font-size: 13px;
   line-height: 1.85;
+  word-wrap: break-word;
 }
 
 .making-desc__button {
-  margin-bottom: 33px;
+  width: 192px;
+  padding-top: 14px;
   margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 32px;
 }
 
 @media (min-width: @tablet-width) {
   .making-desc {
     width: auto;
+    .padding-tablet;
+    margin-top: 23px;
+    margin-bottom: 63px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    border: none;
   }
   .making-desc__title {
+    width: auto;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    margin-left: 66px;
+    margin-top: 38px;
     .font-rule-2;
     line-height: 1.2;
   }
   .making-desc__info {
+    width: auto;
+    margin-left: 0px;
+    margin-top: 32px;
     font-size: 15px;
     line-height: 2.0;
   }
   .making-desc__button {
     width: 584px;
+    margin-top: 35px;
+    margin-left: 2px;
+  }
+  .making-desc__wrapper {
+    width: auto;
+    min-height: 286px;
+    padding-left: 39px;
+    padding-right: 46px;
+    border: 1px solid @gray;
   }
   .making-desc__video {
     width: 668px;
     height: 455px;
-    order: -1;
+    margin-top: 0px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .making-desc {
-    width: auto;
-    position: relative;
+    width: 1048px;
+    .null;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 58px;
+    margin-bottom: 105px;
     flex-direction: row;
     flex-wrap: nowrap;
+    &:hover,
+    &:focus {
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1)
+    }
+    &:active {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1)
+    }
   }
   .making-desc__title {
-  position: absolute;
-  right: 230px;
+    width: 148px;
+    margin-left: 77px;
+    margin-top: 95px;
+  }
+  .making-desc__info {
+    width: 225px;
+    margin-left: 77px;
+    margin-top: 33px;
   }
   .making-desc__wrapper {
-    width: 350px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-around;
+    width: 365px;
+    padding-right: 0px;
+    padding-left: 0px;
+
   }
   .making-desc__video {
     width: 682px;
@@ -72,5 +130,7 @@
   }
   .making-desc__button {
     width: 230px;
+    margin-left: 79px;
+    margin-top: 46px;
   }
 }
