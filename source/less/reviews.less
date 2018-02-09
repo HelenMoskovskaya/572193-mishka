@@ -1,17 +1,20 @@
 .reviews {
   width: auto;
-  margin-top: 70px;
+  .padding-mobile;
+  margin-bottom: 86px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
 }
 .reviews__item {
   .null;
+  word-wrap: break-word;
 }
 .reviews__text {
   .null;
   line-height: 2.0;
-  margin-bottom: 35px;
+  margin-bottom: 22px;
+  margin-top: 3px;
 }
 .reviews__author-name {
   .font-rule-1;
@@ -20,20 +23,47 @@
 }
 
 .reviews__author-nickname {
-  margin-top: 40px;
   font-size: 17px;
   font-style: normal;
 }
 .reviews__button-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
   margin-top: 30px;
 }
+.reviews__button {
+  .null;
+  width: 130px;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  outline: transparent;
+  border: 1px solid @gray;
+  &--prev {
+    background-image: url(../img/icon-left-arrow.svg);
+  }
+  &--next {
+  background-image: url(../img/icon-right-arrow.svg);
+  }
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+}
 .reviews__write-button {
-  margin-top: 35px;
+  padding-top: 14px;
+  margin-top: 38px;
   order: 7;
 }
 
 @media (min-width: @tablet-width) {
   .reviews {
+    .padding-tablet;
+    padding-top: 68px;
     display: flex;
     flex-wrap: wrap;
     width: auto;
@@ -54,7 +84,23 @@
     margin-left: auto;
   }
   .reviews__button-wrapper {
-    transform: translateY(-70px) translateX(400px);
+    transform: translateY(-85px) translateX(495px);
+  }
+  .reviews__button {
+    width: 85px;
+    border: none;
+  }
+  .reviews__text {
+    margin-top: 15px;
+    line-height: 1.8;
+    word-wrap: break-word;
+  }
+  .reviews__author-name {
+    margin-top: 31px;
+  }
+  .reviews__author-name,
+  .reviews__author-nickname {
+    width: 435px;
   }
 }
 
@@ -63,9 +109,28 @@
 @media (min-width: @desktop-width) {
   .reviews {
     width: auto;
+    padding-top: 53px;
+    margin-left: 175px;
   }
   .reviews__button-wrapper {
     top: 0px;
+  }
+  .reviews__text {
+    width: 770px;
+    margin-top: 5px;
+  }
+  .reviews__write-button {
+    margin-top: 59px;
+    margin-left: auto;
+  }
+  .reviews__title {
+    margin-top: 50px;
+  }
+  .reviews__author-name {
+    margin-top: 12px;
+  }
+  .reviews__button-wrapper {
+    transform: translateY(-85px) translateX(703px);
   }
 }
 
