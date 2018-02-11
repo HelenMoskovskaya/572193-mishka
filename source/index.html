@@ -16,9 +16,9 @@
       </a></div>
         <div class="navigation__wrapper">
         <ul class="navigation__main-list">
-          <li class="navigation__main-item"><a class="navigation__link" href="catalog.html">Каталог товаров</a></li>
+          <li class="navigation__main-item navigation__catalog"><a class="navigation__link" href="catalog.html">Каталог товаров</a></li>
           <li class="navigation__main-item"><a class="navigation__link" href="form-order.html">Вязание на заказ</a></li>
-          <li class="navigation__main-item"><a class="navigation__link" href="new.html">Новые поступления</a></li>
+          <li class="navigation__main-item navigation__newGoods"><a class="navigation__link" href="new.html">Новые поступления</a></li>
           <li class="navigation__main-item"><a class="navigation__link" href="sale.html">Распродажа</a></li>
         </ul>
         <span class="navigation__info">Бесплатная доставка по России</span>
@@ -31,12 +31,13 @@
     </header>
     <main class="page-main">
       <section class="promo">
+        <div class="promo__wrapper">
         <h1 class="title-1 promo__title">Милые штуки ручной<br> работы для дома</h1>
-
         <div class="promo__list">
           <a class="promo__item promo__item--1" href="interior.html">Предметы<br> интерьера</a>
           <a class="promo__item promo__item--2" href="baby-toy.html">Детские<br> игрушки</a>
         </div>
+      </div>
       </section>
       <section class="popular-goods">
         <div class="popular-goods__title-wrapper">
@@ -65,7 +66,11 @@
         <button class="button modal-open popular-goods__button">Заказать</button>
       </div>
     </div>
-    <img class="popular-goods__img" src="http://placehold.it/150x100" alt="Товар недели">
+    <picture class="popular-goods__picture">
+                <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+                <img class="popular-goods__img" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Товар недели Вязаные корзинки">
+              </picture>
   </div>
       </section>
       <section class="about-us">

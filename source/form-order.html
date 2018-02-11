@@ -11,14 +11,14 @@
       <nav class="navigation navigation--closed navigation--nojs">
         <button class="navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="page-header-logo__wrapper">
-      <a href="index.html" class="page-header-logo">
+      <a href="index.html" lass="page-header-logo">
         <img class="page-header-logo__image" src="img/logo-mobile.svg" width="86" height="35px" alt="Логотип Мишка">
       </a></div>
         <div class="navigation__wrapper">
         <ul class="navigation__main-list">
-          <li class="navigation__main-item"><a class="navigation__link" href="catalog.html">Каталог товаров</a></li>
+          <li class="navigation__main-item navigation__catalog"><a class="navigation__link" href="catalog.html">Каталог товаров</a></li>
           <li class="navigation__main-item"><a class="navigation__link" href="form-order.html">Вязание на заказ</a></li>
-          <li class="navigation__main-item"><a class="navigation__link" href="new.html">Новые поступления</a></li>
+          <li class="navigation__main-item navigation__newGoods"><a class="navigation__link" href="new.html">Новые поступления</a></li>
           <li class="navigation__main-item"><a class="navigation__link" href="sale.html">Распродажа</a></li>
         </ul>
         <span class="navigation__info">Бесплатная доставка по России</span>
@@ -34,7 +34,8 @@
         <h1 class="title-1 form__title">Вязание на заказ</h1>
         <p class="form__intro">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
         <form class="form__list" action="https://echo.htmlacademy.ru" method="get">
-          <fieldset class="form__item-filter">
+          <fieldset class="form__item-filter form__item-filter--type">
+          <div class="form__item-conteiner">
           <h3 class="form__line form__item-title form__radio-title">Тип</h3>
           <div class="form__line form__item-wrapper">
             <ul class="form__line form__radio">
@@ -48,8 +49,10 @@
               </li>
             </ul>
           </div>
+        </div>
           </fieldset>
-          <fieldset class="form__item-filter">
+          <fieldset class="form__item-filter form__item-filter--color">
+            <div class="form__item-conteiner">
             <h3 class="form__line form__item-title form__color-title">Цвет</h3>
               <div class="form__line form__item-wrapper">
             <ul class="form__color">
@@ -78,9 +81,11 @@
                 <label for="orange">Оранжевый</label>
               </li>
             </ul>
-          </div>
+        </div>
+      </div>
           </fieldset>
-          <fieldset class="form__item-filter">
+          <fieldset class="form__item-filter form__item-filter--name">
+            <div class="form__item-conteiner">
             <h3 class="form__line form__item-title form__name-title">ФИО</h3>
             <div class="form__line form__item-wrapper">
             <ul class="form__name">
@@ -98,21 +103,22 @@
               </li>
             </ul>
           </div>
+          </div>
           </fieldset>
-          <fieldset class="form__item-field form__phone">
-            <div class="form__item-wrapper">
+          <fieldset class="form__item-field form__item-field--phone">
+            <div class="form__item-wrapper form__phone">
             <h3 class="form__line form__item-title form__phone-title">Тел</h3>
             <input class="form__line form__input-phone" type="tel" name="tel" required placeholder="+7 ХХХ ХХ ХХ*">
           </div>
           </fieldset>
-          <fieldset class="form__item-field form__email">
-            <div class="form__item-wrapper">
+          <fieldset class="form__item-field form__item-field--email">
+            <div class="form__item-wrapper form__email">
             <h3 class="form__line form__item-title form__email-title">E-mail</h3>
             <input class="form__line form__input-email" type="email" name="email" required placeholder="Ваш Email*">
           </div>
           </fieldset>
-          <fieldset class="form__item-field form__textarea">
-            <div class="form__item-wrapper">
+          <fieldset class="form__item-field form__item-field--textarea">
+            <div class="form__item-wrapper form__textarea">
             <h3 class="form__line form__item-title form__textarea-title">Доп</h3>
             <textarea class="form__line form__input-textarea" name="comment" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </div>
