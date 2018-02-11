@@ -1,5 +1,6 @@
 .reviews {
-  width: auto;
+  width: 260px;
+  margin: 0 auto;
   .padding-mobile;
   margin-bottom: 86px;
   display: flex;
@@ -55,19 +56,30 @@
   }
 }
 .reviews__write-button {
-  padding-top: 14px;
+  padding-top: 13px;
   margin-top: 38px;
+  font-size: 18px;
   order: 7;
 }
 
 @media (min-width: @tablet-width) {
   .reviews {
+    width: 668px;
     .padding-tablet;
-    padding-top: 68px;
+    margin: 0 auto;
+    padding-top: 99px;
     display: flex;
     flex-wrap: wrap;
-    width: auto;
     flex-direction: row;
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: left 58px;
+    background-size: 350px 457px;
+    @media(min-resolution: @retina-dpi), (min-resolution: @retina-dppx){
+      background-image: url("../img/review@2x.jpg");
+      background-size: 350px 457px;
+      background-position: left 58px;
+    }
   }
   .reviews__item {
     display: flex;
@@ -108,29 +120,59 @@
 
 @media (min-width: @desktop-width) {
   .reviews {
-    width: auto;
-    padding-top: 53px;
-    margin-left: 175px;
+    .null;
+    width: 880px;
+    min-height: 457px;
+    margin: 0 auto;
+    margin-left: 115px;
+    padding-top: 84px;
+    padding-left: 170px;
+    padding-right: 50px;
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: left 0px;
+    background-size: 350px 457px;
+    @media(min-resolution: @retina-dpi), (min-resolution: @retina-dppx){
+      background-image: url("../img/review@2x.jpg");
+      background-repeat: no-repeat;
+      background-size: 350px 457px;
+      background-position: left 64px;
+    }
+  }
+  .reviews__item {
+    justify-content: flex-start;
+
+    }
+  .reviews__title {
+    margin-bottom: 33px;
+    margin-top: 50px;
   }
   .reviews__button-wrapper {
     top: 0px;
   }
   .reviews__text {
     width: 770px;
-    margin-top: 5px;
+    margin-top: 0px;
+    margin-left: 4px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
   }
   .reviews__write-button {
     margin-top: 59px;
     margin-left: auto;
   }
-  .reviews__title {
-    margin-top: 50px;
-  }
   .reviews__author-name {
-    margin-top: 12px;
+    margin-top: 32px;
+    margin-left: 5px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+  .reviews__author-nickname {
+    margin-left: 5px;
+    margin-top: 0px;
   }
   .reviews__button-wrapper {
-    transform: translateY(-85px) translateX(703px);
+    transform: translateY(-102px) translateX(703px);
   }
 }
 
