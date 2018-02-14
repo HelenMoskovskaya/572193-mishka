@@ -12,9 +12,39 @@
 }
 
 .about-us__item {
+  position: relative;
   width: 251px;
   margin-top: 84px;
   word-wrap: break-word;
+}
+
+.about-us__icon {
+  position: absolute;
+  fill: @light-green;
+  &--flower {
+    top: -52px;
+    left: 8px;
+  }
+  &--money {
+    top: -52px;
+    left: 0px;
+  }
+  &--heart {
+    top: -48px;
+    left: 7px;
+  }
+  &--ball {
+    top: -52px;
+    left: 4px;
+  }
+  &--rocket {
+    top: -52px;
+    left: -6px;
+  }
+  &--gift {
+    top: -55px;
+    left: 3px;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -50,6 +80,32 @@
     display: flex;
     flex-wrap: wrap;
   }
+  .about-us__icon {
+  &--flower {
+    top: -56px;
+    left: 9px;
+  }
+  &--money {
+    top: -54px;
+    left: 1px;
+  }
+  &--heart {
+    top: -48px;
+    left: 8px;
+  }
+  &--ball {
+    top: -53px;
+    left: 0px;
+  }
+  &--rocket {
+    top: -52px;
+    left: -9px;
+  }
+  &--gift {
+    top: -52px;
+    left: 0px;
+  }
+}
 }
 
 @media (min-width: @desktop-width) {
@@ -65,4 +121,26 @@
     width: 640px;
     padding-left: 6px;
   }
+  .about-us__icon {
+  &--money {
+    top: -53px;
+    left: 0px;
+  }
+  &--heart {
+    top: -47px;
+    left: 7px;
+  }
+  &--ball {
+    top: -52px;
+    left: 8px;
+  }
+  &--rocket {
+    top: -50px;
+    left: -2px;
+  }
+  &--gift {
+    top: -51px;
+    left: 8px;
+  }
+}
 }

@@ -7,20 +7,38 @@
   margin-top: 31px;
   line-height: 1.41;
 }
-.making-desc__conteiner {
-  border: 1px solid @gray;
-}
 .making-desc__title {
   position: absolute;
   .null;
   width: 60px;
-  top: 24px;
-  left: 120px;
+  top: 23px;
+  left: 89px;
   .font-rule-1;
   line-height: 1.43;
 }
 .making-desc__video {
+  position: relative;
   margin-top: 96px;
+}
+.making-desc__button-play {
+  position: absolute;
+  width: 101px;
+  height: 77px;
+  top: 36px;
+  left: 78px;
+  background-image: url("../img/icon-play.svg");
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
+  outline: transparent;
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
+  &:active {
+    transform: scale(0.8);
+    opacity: 0.3;
+  }
 }
 .making-desc__img {
   background-color: #e3e1e2;
@@ -35,7 +53,6 @@
   line-height: 1.85;
   word-wrap: break-word;
 }
-
 .making-desc__button {
   width: 192px;
   padding-top: 14px;
@@ -44,6 +61,8 @@
   margin-bottom: 32px;
 }
 .making-desc__conteiner {
+  position: relative;
+  border: 1px solid @gray;
   &:hover,
     &:focus {
       box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1)
@@ -51,14 +70,23 @@
     &:active {
       box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1)
     }
-}
+ }
+    .making-desc__icon {
+      position: absolute;
+      width: 44px;
+      height: 32px;
+      top: 29px;
+      left: 27px;
+      fill: @light-green;
+    }
+
 
 @media (min-width: @tablet-width) {
   .making-desc {
     width: 668px;
     margin: 0 auto;
     .padding-tablet;
-    margin-top: 25px;
+    margin-top: 26px;
     margin-bottom: 63px;
     display: flex;
     flex-wrap: wrap;
@@ -95,6 +123,14 @@
   }
   .making-desc__video {
     margin-top: 0px;
+  }
+  .making-desc__button-play {
+    top: 189px;
+    left: 283px;
+  }
+  .making-desc__icon {
+    top: 488px;
+    left: 35px;
   }
 }
 
@@ -141,5 +177,12 @@
     margin-left: 79px;
     margin-top: 46px;
     margin-bottom: 0px;
+  }
+  .making-desc__button-play {
+    left: 290px;
+  }
+  .making-desc__icon {
+    top: 41px;
+    left: 755px;
   }
 }

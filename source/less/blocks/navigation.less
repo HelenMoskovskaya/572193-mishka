@@ -9,27 +9,50 @@
   font-size: 17px;
   line-height: 1.41;
 }
-
 .navigation__main-list,
 .navigation__user-list {
   .reset-ul;
 }
-
 .navigation__main-item:nth-child(3),
 .navigation__main-item:nth-child(4) {
   display: none;
 }
-
+.navigation__cart {
+  position: relative;
+  .shadow-line;
+}
+.navigation__search {
+  position: relative;
+}
+.navigation__icon {
+  position: absolute;
+  fill: #dbdbdb;
+  &--search {
+    left: 32px;
+    top: 32px;
+  }
+  &--cart {
+    left: 30px;
+    top: 32px;
+  }
+  &:hover,
+  &:focus {
+    fill: #63d1bb;
+  }
+  &:active {
+    fill: #d0f1ea;
+  }
+}
 .navigation__link {
   .reset-link;
   color: @black;
-}
-.navigation__link:hover,
-.navigation__link:focus {
-  color: rgba(0, 0, 0, 0.6);
-}
-.navigation__link:active {
-  color: rgba(0, 0, 0, 0.3);
+  &:hover,
+  &:focus {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
 .navigation__main-item,
 .navigation__user-item {
@@ -149,20 +172,20 @@
   }
   .navigation__user-list {
     width: 348px;
-    height: 58px;
+    height: 88px;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 0px;
   }
   .navigation__user-item {
     height: 88px;
     display: flex;
-    align-items: center;
     justify-content: flex-end;
+    align-items: center;
   }
   .navigation__cart {
     width: 264px;
     line-height: 1.41;
+    box-shadow: none;
   }
   .navigation__desc-search {
     display: none;
@@ -185,9 +208,11 @@
 }
   .navigation__info {
     .null;
+    width: 231px;
     height: 88px;
     display: flex;
-    margin-left: auto;
+    margin-left: 0px;
+    margin-right: 0px;
     text-align: right;
     transform: translateX(437px) translateY(18px);
     z-index: 2;
@@ -195,6 +220,16 @@
     font-size: 15px;
     line-height: 1.6;
     color: #444444;
+  }
+  .navigation__icon {
+    &--search {
+      left: 33px;
+      top: 36px;
+    }
+    &--cart {
+      left: 31px;
+      top: 34px;
+    }
   }
 }
 
@@ -224,6 +259,7 @@
     display: flex;
     align-items: flex-start;
     transform: translateY(18px);
+    z-index: 20;
 }
   .navigation__main-item:nth-child(1),
   .navigation__main-item:nth-child(2) {
@@ -285,7 +321,8 @@
     .null;
     height: 88px;
     display: flex;
-    margin-left: auto;
+    margin-left: 0px;
+    margin-right: 0px;
     text-align: right;
     transform: translateX(819px) translateY(18px);
     z-index: 2;
