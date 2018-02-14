@@ -71,8 +71,21 @@
 
 @media (min-width: @tablet-width) {
   .contacts {
+    position: relative;
     width: 768px;
     margin-bottom: 57px;
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 47px;
+      height: 81px;
+      top: 9px;
+      right: 53px;
+      background-image: url("../img/icon-flag.svg");
+      background-repeat: no-repeat;
+      background-size: 47px 81px;
+    }
   }
   .contacts__wrapper {
     .padding-tablet;
@@ -132,10 +145,14 @@
     padding-left: 167px;
     padding-right: 50px;
     margin-top: 85px;
-    margin-bottom: 87px;
+    margin-bottom: 86px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    &:before {
+      top: 117px;
+      left: 113px;
+    }
   }
   .contacts__title {
     margin-top: 101px;
@@ -177,7 +194,7 @@
   .contacts__button {
     position: absolute;
     left: 225px;
-    bottom: 17px;
+    bottom: 18px;
     transform: translateY(0px) translateX(0px);
   }
   .contacts__desc-email {

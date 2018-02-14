@@ -1,13 +1,13 @@
 .catalog {
+  width: auto;
   margin: 0 auto;
   text-align: center;
-  border-top: 1px solid @gray;
 }
 
 .catalog__title {
   .null;
   min-height: 106px;
-  padding-top: 71px;
+  padding-top: 69px;
   background-color: @color-title;
 }
 .catalog__wrapper {
@@ -17,7 +17,7 @@
 .catalog__list {
   margin: 0 auto;
   .reset-ul;
-  padding-top: 29px;
+  padding-top: 30px;
 }
 .catalog__item-link {
   .reset-link;
@@ -64,9 +64,20 @@
   word-wrap: break-word;
 }
 .catalog__button {
+  width: 21px;
+  height: 18px;
+  padding-top: 2px;
   margin-left: auto;
-  width: 20px;
-  height: 19px;
+  opacity: 0.2;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    fill: rgba(99, 209, 187, 1);
+    opacity: 1;
+  }
+  &:active {
+    fill: rgba(99, 209, 187, 0.3);
+  }
 }
 .catalog__item-wrapper {
   width: 231px;
@@ -92,8 +103,21 @@
     margin: 0 auto;
   }
   .catalog__title {
+    position: relative;
     padding-top: 95px;
     min-height: 131px;
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 768px;
+      height: 23px;
+      top: 213px;
+      left: 0px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: no-repeat;
+      background-size: 768px 23px;
+    }
   }
   .catalog__list {
     margin-top: 48px;
@@ -107,7 +131,7 @@
     width: 666px;
     min-height: 332px;
     margin: 0 auto;
-    margin-bottom: 56px;
+    margin-bottom: 55px;
     display: flex;
     flex-wrap: nowrap;
   }
@@ -162,6 +186,7 @@
   }
   .catalog__button {
     margin-left: auto;
+    padding-top: 0px;
   }
 }
 
@@ -179,6 +204,13 @@
     padding-left: 4px;
     padding-top: 93px;
     min-height: 162px;
+    &:after {
+      width: 1150px;
+      height: 34px;
+      top: 237px;
+      left: 0px;
+      background-size: 1150px 34px;
+    }
   }
   .catalog__list {
     padding-top: 78px;
