@@ -1,0 +1,128 @@
+.modal-basket__list {
+  .reset-ul;
+  width: 260px;
+  margin: 0 auto;
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.modal-basket__item-radio {
+  width: 82px;
+  height: 33px;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.modal-basket__radio-input {
+  display: none;
+}
+
+.modal-basket__label {
+  .font-rule-1;
+}
+
+.modal-basket__radio-input + label {
+  cursor: pointer;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -16px;
+    width: 78px;
+    height: 48px;
+    border: 2px solid rgba(68, 68, 68, 0.1);
+  }
+}
+
+.modal-basket__radio-input:checked + label {
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 78px;
+    height: 48px;
+    border: 2px solid @light-green;
+  }
+}
+
+.modal-basket__button {
+  width: 260px;
+  margin: 0 auto;
+  margin-top: 35px;
+  color: @white;
+  background-color: @light-green;
+  border-color: @light-green;
+}
+
+/*Активация display:flex*/
+.modal-basket {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 320px;
+  min-height: 336px;
+  border: 1px solid #c6c6c6;
+  box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
+}
+
+.modal-basket__title {
+  .null;
+  margin-top: 30px;
+  padding-left: 7px;
+  width: 148px;
+  text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .modal-basket {
+    width: 564px;
+    margin: 0 auto;
+  }
+
+  .modal-basket__list {
+    width: 351px;
+    margin: 0 auto;
+    margin-top: 5px;
+  }
+
+  .modal-basket__item-radio {
+    width: 112px;
+    height: 33px;
+    padding-top: 15px;
+  }
+
+  .modal-basket__radio-input + label {
+    cursor: pointer;
+    position: relative;
+
+    &::before {
+      width: 108px;
+    }
+  }
+
+  .modal-basket__radio-input:checked + label {
+    cursor: pointer;
+
+    &::before {
+      width: 108px;
+    }
+  }
+
+  .modal-basket__title {
+    width: 355px;
+    font-size: 30px;
+    line-height: 1.9;
+  }
+
+  .modal-basket__button {
+    width: 350px;
+  }
+}

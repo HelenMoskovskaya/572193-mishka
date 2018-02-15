@@ -1,0 +1,28 @@
+.page-footer {
+  width: 260px;
+  .padding-mobile;
+  margin: 0 auto;
+  min-height: 160px;
+  background-color: @back-gray;
+}
+
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    width: 668px;
+    margin: 0 auto;
+    min-height: 143px;
+    .padding-tablet;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    width: 1050px;
+    .padding-desktop;
+    margin: 0 auto;
+  }
+}

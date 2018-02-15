@@ -1,0 +1,35 @@
+.page-footer-logo {
+  display: none;
+
+  &--cursor {
+    cursor: pointer;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer-logo {
+    display: flex;
+    margin-top: 51px;
+    width: 102px;
+    height: 34px;
+    z-index: 2;
+
+    &:hover,
+    &:focus {
+      fill: #46c1ae;
+    }
+
+    &:active {
+      fill: #bde3dd;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer-logo {
+    width: 102px;
+    height: 34px;
+    margin-top: 51px;
+    margin-left: 1px;
+  }
+}
