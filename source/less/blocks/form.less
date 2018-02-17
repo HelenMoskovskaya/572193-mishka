@@ -22,6 +22,7 @@
 
 .form__item-field,
 .form__item-filter {
+  .null;
   margin: 0 auto;
   border: none;
   width: 278px;
@@ -68,6 +69,7 @@
   margin: 0 auto;
   padding-left: 30px;
   padding-right: 48px;
+  margin-bottom: 25px;
   margin-top: 22px;
   font-size: 13px;
   line-height: 1.85;
@@ -104,7 +106,6 @@
 .form__input-textarea:hover,
 .form__input-textarea:focus {
   border-color: @light-green;
-  outline: transparent;
 }
 
 .form__input-name:active,
@@ -112,7 +113,6 @@
 .form__input-email:active,
 .form__input-textarea:active {
   border-color: @light-green;
-  outline: transparent;
 }
 
 .form__input-name,
@@ -125,8 +125,8 @@
 }
 
 .form__radio-list {
-  margin-top: 36px;
-  padding-bottom: 4px;
+  margin-top: 35px;
+  padding-bottom: 19px;
 }
 
 .form__radio-item {
@@ -166,9 +166,13 @@
   background-color: #62d1ba;
 }
 
-.form__radio-input + label:hover::before,
-.form__radio-input + label:focus::before {
+.form__radio-input + label:hover::before {
   border: 2px solid #62d1ba;
+}
+
+.form__radio-input:focus + label::before,
+.form__checkbox-input:focus + label::before {
+  outline: 2px solid #1e90ff;
 }
 
 .form__radio-input + label:active::before {
@@ -177,7 +181,7 @@
 
 .form__checkbox-list {
   margin-top: 37px;
-  padding-bottom: 17px;
+  padding-bottom: 31px;
 }
 
 .form__checkbox-item {
@@ -230,17 +234,20 @@
 }
 
 .form__name-list {
-  margin-top: 30px;
-  padding-bottom: 12px;
+  margin-top: 28px;
+  padding-bottom: 25px;
 }
 
 .form__input-name {
   width: 258px;
-  height: 46px;
+  height: 49px;
   border: none;
-  padding-top: 3px;
   margin-left: 1px;
   border-bottom: 2px solid @black;
+
+  &::placeholder {
+    line-height: 2.9;
+  }
 }
 
 .form__name-item {
@@ -256,12 +263,16 @@
 
 .form__input-phone {
   width: 258px;
-  height: 46px;
-  margin-top: 10px;
+  height: 48px;
+  margin-top: 7px;
   margin-left: 1px;
-  margin-bottom: 17px;
+  margin-bottom: 32px;
   border: none;
   border-bottom: 2px solid @black;
+
+  &::placeholder {
+    line-height: 2.9;
+  }
 }
 
 .form__phone {
@@ -291,12 +302,16 @@
 
 .form__input-email {
   width: 258px;
-  height: 46px;
-  margin-top: 10px;
+  height: 48px;
+  margin-top: 7px;
   margin-left: 1px;
-  margin-bottom: 18px;
+  margin-bottom: 33px;
   border: none;
   border-bottom: 2px solid @black;
+
+  &::placeholder {
+    line-height: 2.9;
+  }
 }
 
 .form__email {
@@ -313,10 +328,14 @@
   width: 239px;
   height: 121px;
   border: 2px solid @black;
-  margin-top: 26px;
-  margin-left: 0;
+  margin-left: -1px;
   padding-top: 15px;
   padding-left: 15px;
+  margin-bottom: 15px;
+}
+
+.form__textarea-title {
+  margin-bottom: 24px;
 }
 
 .form__button-wrapper {
@@ -328,10 +347,14 @@
   .null;
   font-size: 14px;
   line-height: 1.14;
+  margin-left: -1px;
 }
 
 .form__button {
+  width: 260px;
+  padding-top: 3px;
   margin-top: 32px;
+  margin-left: -1px;
 }
 
 @media (min-width: @tablet-width) {
@@ -468,11 +491,8 @@
     margin: 0 auto;
     width: 716px;
     min-height: 239px;
-    margin-left: 0;
-    margin-right: 0;
     padding-left: 52px;
     padding-right: 0;
-    margin-top: 0;
     padding-top: 65px;
     background-color: @back-gray;
   }
@@ -544,6 +564,10 @@
     padding-left: 17px;
     margin-bottom: 0;
     border-bottom: 2px solid @black;
+
+    &::placeholder {
+      line-height: 2.6;
+    }
   }
 
   .form__name-label {
@@ -581,6 +605,10 @@
     border: none;
     border-bottom: 2px solid @black;
     background-color: @back-gray;
+
+    &::placeholder {
+      line-height: 2;
+    }
   }
 
   .form__phone-title {
@@ -619,6 +647,10 @@
     border: none;
     border-bottom: 2px solid @black;
     background-color: @back-gray;
+
+    &::placeholder {
+      line-height: 2.1;
+    }
   }
 
   .form__email-title {
@@ -651,6 +683,7 @@
     margin-left: 126px;
     padding-top: 14px;
     padding-left: 15px;
+    margin-bottom: 0;
   }
 
   .form__textarea-title {
@@ -659,6 +692,7 @@
 
   .form__button-wrapper {
     width: 668px;
+    margin-left: 1px;
     .padding-tablet;
     display: flex;
     justify-content: space-between;
@@ -738,13 +772,11 @@
   .form__item-filter--checkbox {
     width: 1040px;
     min-height: 163px;
-    margin-left: 0;
-    margin-right: 0;
     padding-left: 110px;
     padding-right: 0;
-    margin-top: 0;
     padding-top: 65px;
     background-color: @back-gray;
+    margin: 0 auto;
   }
 
   .form__checkbox-list {
