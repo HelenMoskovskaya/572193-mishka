@@ -116,12 +116,3 @@ gulp.task("build", function (done) {
     done
   );
 });
-
-gulp.task("uglify", function () {
-  return gulp.src("source/js/*.js")
-    .pipe(uglify())
-    .pipe(rename(function (path) {
-      path.basename +=".min";
-    }))
-    .pipe(gulp.dest("build/js"));
-});
