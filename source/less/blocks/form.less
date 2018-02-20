@@ -173,7 +173,8 @@
   }
 }
 
-.form__radio-input:checked + label::after {
+.form__radio-input:checked + label::after,
+.form__radio-input:active + label::after {
   content: "";
   position: absolute;
   display: block;
@@ -230,7 +231,8 @@
   }
 }
 
-.form__checkbox-input:checked + label::after {
+.form__checkbox-input:checked + label::after,
+.form__checkbox-input:active + label::after {
   content: "";
   position: absolute;
   display: block;
@@ -552,7 +554,8 @@
     }
   }
 
-  .form__radio-input:checked + label::after {
+  .form__radio-input:checked + label::after,
+  .form__radio-input:active + label::after {
     width: 22px;
     height: 22px;
     top: -1px;
@@ -601,7 +604,8 @@
     }
   }
 
-  .form__checkbox-input:checked + label::after {
+  .form__checkbox-input:checked + label::after,
+  .form__checkbox-input:active + label::after {
     width: 33px;
     height: 22px;
     top: 1px;
