@@ -2,7 +2,7 @@
   .reset-ul;
   width: 260px;
   margin: 0 auto;
-  margin-top: 12px;
+  margin-top: 28px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -56,17 +56,17 @@
 .modal-basket__button {
   width: 260px;
   margin: 0 auto;
-  margin-top: 35px;
+  margin-top: 34px;
   color: @white;
   background-color: @light-green;
   border-color: @light-green;
 }
 
-/*Активация display:flex*/
+/*Активация display:block*/
 .modal-basket {
   display: none;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
   width: 320px;
   min-height: 336px;
   border: 1px solid #c6c6c6;
@@ -75,6 +75,7 @@
 
 .modal-basket__title {
   .null;
+  margin-left: 80px;
   margin-top: 30px;
   padding-left: 7px;
   width: 148px;
@@ -85,12 +86,13 @@
   .modal-basket {
     width: 564px;
     margin: 0 auto;
+    margin-bottom: 30px;
   }
 
   .modal-basket__list {
     width: 351px;
     margin: 0 auto;
-    margin-top: 5px;
+    margin-top: 22px;
   }
 
   .modal-basket__item-radio {
@@ -118,9 +120,18 @@
 
   .modal-basket__title {
     width: 355px;
+    margin-top: 34px;
+    margin-left: 100px;
+
     font-size: 30px;
     line-height: 1.9;
   }
+
+  .modal-basket__info {
+    .null;
+    margin-top: 14px;
+  }
+
 
   .modal-basket__button {
     width: 350px;

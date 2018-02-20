@@ -1,76 +1,71 @@
 .social {
   width: auto;
+  margin: 0 auto;
   min-height: 160px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .social__list {
   .reset-ul;
-  width: 142px;
-  margin: 0 auto;
-  margin-left: 57px;
-  min-height: 75px;
-  padding-top: 6px;
+  width: 260px;
+  margin-left: 17px;
+  min-height: 80px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
-.social__working-item {
-  &:first-child {
-    margin-top: 3px;
+.social__item {
+  margin-right: 40px;
+  margin-top: 6px;
+}
+
+.social__link {
+  &:hover,
+  &:focus {
+    fill: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
+
 .social__working-link {
   .reset-link;
+  width: 183px;
+  min-height: 55px;
+  margin: 0 auto;
+  padding-top: 25px;
   font-family: @font-bold;
   font-size: 19px;
   color: @black;
   line-height: 0.95;
-
-  &--text:active {
-    color: rgba(0, 0, 0, 0.3);
-  }
-
-  &--logo {
-    fill: rgba(99, 209, 187, 1);
-  }
-
-  &--logo:hover,
-  &--logo:focus {
-    fill: rgba(70, 193, 174, 1);
-  }
-
-  &--logo:active {
-    fill: rgba(70, 193, 174, 0.3);
-  }
-}
-
-.social__working {
-  .reset-ul;
-  width: 183px;
-  min-height: 58px;
-  margin: 0 auto;
-  margin-left: -2px;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 21px;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  border-top: 1px solid @black;
-}
+  align-items: flex-start;
+  justify-content: space-between;
+  fill: @light-green;
 
-.social__link {
   &:hover,
   &:focus {
     fill: rgba(70, 193, 174, 1);
   }
 
   &:active {
-    fill: rgba(70, 193, 174, 0.3);
+    opacity: 0.3;
   }
+}
+
+.social__working {
+  .null;
+  width: 260px;
+  min-height: 78px;
+  border-top: 1px solid #e5e5e5;
 }
 
 @media (min-width: @tablet-width) {
@@ -78,27 +73,23 @@
     .null;
     width: auto;
     min-height: 143px;
-    display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
   }
 
   .social__list {
-    width: 141px;
-    border-bottom: none;
+    width: 226px;
     margin-top: 5px;
-    margin-right: 83px;
+    margin-right: 21px;
   }
 
   .social__working {
-    margin-left: auto;
-    margin-top: 33px;
-    padding-left: 0;
-    padding-right: 0;
-    border-top: none;
+    width: 183px;
+    padding-top: 37px;
+    border: none;
   }
 
-  .social__working-item:last-child {
-    margin-top: 4px;
+  .social__working-link {
+    margin-left: 0;
   }
 }
 
@@ -108,6 +99,7 @@
   }
 
   .social__list {
-    margin-right: 274px;
+    width: 350px;
+    margin-right: 150px;
   }
 }

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link rel="preload" href="fonts/opensans.woff2" as="font">
-    <link rel="preload" href="fonts/fonts/opensansbold.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -32,7 +32,7 @@
         </div>
         <ul class="navigation__user-list">
           <li class="navigation__user-item navigation__search">
-            <a class="navigation__link" href="#">
+            <a class="navigation__link navigation__link--search" href="#">
               <svg class="navigation__icon navigation__icon--search" width="18" height="18" >
                 <use xlink:href="#icon-search"></use>
               </svg>
@@ -40,7 +40,7 @@
             </a>
           </li>
           <li class="navigation__user-item navigation__cart">
-            <a class="navigation__link" href="#">
+            <a class="navigation__link navigation__link--cart" href="#">
               <svg class="navigation__icon navigation__icon--cart" width="21" height="18">
                 <use xlink:href="#icon-cart"></use>
               </svg>
@@ -52,20 +52,22 @@
     </header>
     <main class="page-main">
       <section class="promo">
-        <h1 class="title-1 promo__title">Милые штуки ручной работы&nbsp;для дома</h1>
-        <div class="promo__list">
-          <a class="promo__item promo__item--1" href="interior.html">
-            <svg class="promo__icon promo__icon--interior" width="40" height="62" >
-              <use xlink:href="#icon-interior"></use>
-            </svg>
-            <p class="promo__item-info">Предметы интерьера</p>
-          </a>
-          <a class="promo__item promo__item--2" href="baby-toy.html">
-            <svg class="promo__icon promo__icon--toy" width="60" height="60" >
-              <use xlink:href="#icon-toy"></use>
-            </svg>
-            <p class="promo__item-info">Детские игрушки</p>
-          </a>
+        <div class="promo__wrapper">
+          <h1 class="title-1 promo__title">Милые штуки ручной работы&nbsp;для дома</h1>
+          <div class="promo__list">
+            <a class="promo__item promo__item--1" href="interior.html">
+              <svg class="promo__icon promo__icon--interior" width="40" height="62" >
+                <use xlink:href="#icon-interior"></use>
+              </svg>
+              <p class="promo__item-info">Предметы интерьера</p>
+            </a>
+            <a class="promo__item promo__item--2" href="baby-toy.html">
+              <svg class="promo__icon promo__icon--toy" width="60" height="60" >
+                <use xlink:href="#icon-toy"></use>
+              </svg>
+              <p class="promo__item-info">Детские игрушки</p>
+            </a>
+          </div>
         </div>
       </section>
       <section class="popular-goods">
@@ -152,7 +154,7 @@
       </section>
       <section class="reviews">
         <h2 class="title-2 reviews__title">Отзывы</h2>
-        <a class="button reviews__write-button" href="#">Написать</a>
+        <a class="button reviews__write-button" href="reviews.html">Написать</a>
         <blockquote class="reviews__item">
           <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
           <cite class="reviews__author-name">Анастасия Красильникова</cite>
@@ -192,7 +194,7 @@
       </section>
       <section class="modal-basket">
         <h2 class="title-2 modal-basket__title">Добавить в корзину</h2>
-        <p>Выберите размер:</p>
+        <p class="modal-basket__info">Выберите размер:</p>
         <form class="modal-basket__form" action="https://echo.htmlacademy.ru" method="get">
           <ul class="modal-basket__list">
             <li class="modal-basket__item-radio">
@@ -213,53 +215,51 @@
       </section>
     </main>
     <footer class="page-footer">
-      <a class="page-footer-logo">
-        <svg class="page-footer-logo__image" width="102" height="34">
-          <use xlink:href="#icon-logo-footer"></use>
-        </svg>
-      </a>
-      <section class="social">
-        <h2 class="visually-hidden">Мы в соцсетях</h2>
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="#">
-              <span class="visually-hidden">Инстаграм</span>
-              <svg width="22" height="21" >
-                <use xlink:href="#icon-insta"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="#">
-              <span class="visually-hidden">Фейсбук</span>
-              <svg width="15" height="28" >
-                <use xlink:href="#icon-fb"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--twitter" href="#">
-              <span class="visually-hidden">Твиттер</span>
-              <svg width="23" height="20" >
-                <use xlink:href="#icon-twitter"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-        <ul class="social__working">
-          <li class="social__working-item">
-            <a class="social__working-link social__working-link--text" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
-          </li>
-          <li class="social__working-item">
-            <a class="social__working-link social__working-link--logo" href="https://htmlacademy.ru/intensive/adaptive">
+      <div class="page-footer__wrapper">
+        <a class="page-footer-logo">
+          <svg class="page-footer-logo__image" width="102" height="34">
+            <use xlink:href="#icon-logo-footer"></use>
+          </svg>
+        </a>
+        <section class="social">
+          <h2 class="visually-hidden">Мы в соцсетях</h2>
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="#">
+                <span class="visually-hidden">Инстаграм</span>
+                <svg width="22" height="21" >
+                  <use xlink:href="#icon-insta"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="#">
+                <span class="visually-hidden">Фейсбук</span>
+                <svg width="15" height="28" >
+                  <use xlink:href="#icon-fb"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--twitter" href="#">
+                <span class="visually-hidden">Твиттер</span>
+                <svg width="23" height="20" >
+                  <use xlink:href="#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <p class="social__working">
+            <a class="social__working-link" href="https://htmlacademy.ru/intensive/adaptive">
+              Разработано
               <span class="visually-hidden">htmlacademy</span>
               <svg width="27" height="34" >
                 <use xlink:href="#icon-logo-htmlacademy"></use>
               </svg>
             </a>
-          </li>
-        </ul>
-      </section>
+          </p>
+        </section>
+      </div>
     </footer>
     <div class="sprite-svg">
       <include src="build/img/sprite.svg"></include>

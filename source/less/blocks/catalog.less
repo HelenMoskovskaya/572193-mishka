@@ -1,11 +1,12 @@
 .catalog {
-  width: auto;
+  width: 320px;
   margin: 0 auto;
   text-align: center;
 }
 
 .catalog__title {
   .null;
+  width: 320px;
   min-height: 106px;
   padding-top: 70px;
   margin-left: -2px;
@@ -13,12 +14,8 @@
   z-index: -2;
 }
 
-.catalog__wrapper {
-  width: 320px;
-  margin: 0 auto;
-}
-
 .catalog__list {
+  width: 320px;
   margin: 0 auto;
   .reset-ul;
   padding-top: 30px;
@@ -70,7 +67,7 @@
   padding-bottom: 27px;
   display: flex;
   flex-wrap: nowrap;
-  border-top: 1px solid black;
+  border-top: 1px solid @gray;
   word-wrap: break-word;
 }
 
@@ -114,15 +111,17 @@
 
 
 @media (min-width: @tablet-width) {
-  .catalog__wrapper {
+  .catalog {
     width: 768px;
     margin: 0 auto;
   }
 
   .catalog__title {
+    width: 768px;
     position: relative;
     padding-top: 96px;
     min-height: 131px;
+    margin: 0 auto;
     margin-left: 1px;
 
     &::after {
@@ -165,7 +164,7 @@
   .catalog__item-wrapper {
     .null;
     width: 332px;
-    min-height: 332px;
+    min-height: 330px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -188,7 +187,7 @@
   }
 
   .catalog__desc-wrap {
-    width: 332px;
+    width: 306px;
     padding-top: 25px;
     padding-left: 26px;
   }
@@ -200,6 +199,8 @@
 
   .catalog__item-img {
     .null;
+    width: 100%;
+    height: 100%;
     display: block;
     background-color: #ebebeb;
   }
@@ -210,9 +211,6 @@
     margin-left: -3px;
   }
 
-  .catalog__item:last-child {
-    margin-bottom: 28px;
-  }
 
   .catalog__price-wrapper {
     display: flex;
@@ -230,36 +228,51 @@
 }
 
 @media (min-width: @desktop-width) {
-  .catalog__wrapper {
-    .null;
-    width: 1150px;
-    margin: 0 auto;
+  .catalog {
+    width: auto;
+    margin-bottom: 27px;
   }
 
-  .catalog {
-    margin-bottom: 28px;
+  .catalog__wrapper {
+    background-color: @color-title;
+    min-height: 255px;
+    width: 100%;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 34px;
+      bottom: -16px;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+      background-position: center 0;
+      z-index: 20;
+    }
   }
 
   .catalog__title {
+    margin: 0 auto;
+    width: 1146px;
     padding-left: 4px;
     padding-top: 94px;
     min-height: 161px;
+    z-index: 1;
 
     &::after {
-      width: 1150px;
-      height: 34px;
-      top: 237px;
-      left: 0;
-      background-size: 1150px 34px;
+      width: 0;
+      height: 0;
     }
   }
 
   .catalog__list {
-    padding-top: 80px;
-    padding-left: 0;
-    padding-right: 0;
     width: 1100px;
-    margin-left: 50px;
+    margin: 0 auto;
+    padding-top: 127px;
+    padding-left: 50px;
+    padding-right: 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -268,29 +281,35 @@
   .catalog__item {
     width: 316px;
     min-height: 655px;
-    margin-right: 50px;
+    margin: 0;
+    margin-right: 51px;
     flex-direction: column;
     justify-content: flex-start;
     margin-bottom: 30px;
   }
 
+  .catalog__item:nth-child(3) {
+    margin-right: 0;
+  }
+
   .catalog__item-wrapper {
     .null;
-    display: block;
+    display: flex;
     width: 314px;
-    min-height: 165px;
+    min-height: 195px;
     padding-left: 0;
     padding-top: 0;
+    flex-grow: 2;
+    justify-content: flex-start;
   }
 
   .catalog__link-wrap {
     .null;
-    margin-right: 0;
   }
 
   .catalog__item-desc {
-    padding-top: 6px;
-    padding-bottom: 0;
+    .null;
+    width: 300px;
   }
 
   .catalog__item-link {
@@ -299,24 +318,25 @@
 
   .catalog__desc-wrap {
     .null;
+    width: 314px;
     min-height: 97px;
-    padding-left: 27px;
-    padding-top: 25px;
+    margin-left: 27px;
+    margin-top: 25px;
   }
 
   .catalog__price-wrapper {
+    .null;
     width: 256px;
-    padding-left: 25px;
-    margin-left: 0;
-    align-self: left;
+    min-height: 41px;
+    margin-top: auto;
+    padding-bottom: 10px;
+    padding-top: 21px;
   }
 
   .catalog__item-price {
-    margin-left: -1px;
-  }
+    .null;
+    margin-left: -3px;
 
-  .catalog__item:last-child {
-    margin-bottom: 0;
   }
 
   .catalog__item-img {
