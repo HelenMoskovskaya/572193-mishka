@@ -18,7 +18,6 @@ var run = require("run-sequence");
 var htmlmin = require("gulp-htmlmin");
 var uglify = require("gulp-uglify");
 
-
 gulp.task("clean", function () {
   return del("build");
 });
